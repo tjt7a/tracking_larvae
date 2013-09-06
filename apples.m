@@ -1,1 +1,0 @@
-Howdy; im an apple!
