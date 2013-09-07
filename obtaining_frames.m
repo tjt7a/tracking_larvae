@@ -1,7 +1,10 @@
 clc;
 close all;
-
-filename = '.\larvae1.avi';
+if ismac
+    filename = './videos/larvae1.avi';
+else
+    filename = '.\larvae1.avi';
+end
 mov = mmreader(filename);
 
 % Creating Output folder
@@ -18,11 +21,11 @@ numberOfFramesWritten = 0;
 for frame = 1 : numberOfFrames
 thisFrame = read(mov, frame);
 I=rgb2gray(thisFrame);
-outBaseFileName = sprintf('%3.3d.png', frame);  %
-outFullFileName = fullfile(outputFolder, outputBaseFileName);%
+outputBaseFileName = sprintf('%3.3d.png', frame);  %
+outputFullFileName = fullfile(outputFolder, outputBaseFileName);
 imwrite(I, outputFullFileName, 'png');
 progressIndication = sprintf('Processing Hold on... %4d of %d.', frame,numberOfFrames);%
-disp(progressIndication);%
+disp(progressIndication);
 numberOfFramesWritten = numberOfFramesWritten + 1;
 end
 progressIndication = sprintf('Wrote %d frames to folder "%s"',numberOfFramesWritten, outputFolder);
