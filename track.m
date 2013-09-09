@@ -15,5 +15,3 @@ for i = 10 : 10
     binary_frame = frame > threshold;
     imshow(binary_frame);
 end
-
-    
