@@ -6,7 +6,7 @@ classdef larva
     end
     methods
         function obj=larva(location)
-            previous_location = location;
+            obj.previous_location = location;
         end
     end
 end
