@@ -13,10 +13,10 @@ mkdir(outputFolder);
 end
 
 % Getting # of frames
-%numberOfFrames = mov.NumberOfFrames;
+numberOfFrames = mov.NumberOfFrames;
 numberOfFramesWritten = 0;
 
-for frame = 1 : 10
+for frame = 1 : numberOfFrames
 thisFrame = read(mov, frame);
 I=rgb2gray(thisFrame);
 outBaseFileName = sprintf('%3.3d.png', frame);  %
