@@ -1,0 +1,10 @@
+function []=getinitialframe(vidfilename)
+
+mov = mmreader(vidfilename);
+frame=read(mov,1);
+I=rgb2gray(frame);
+outBaseFileName = sprintf('initialframe.png', frame);  %
+outFullFileName = fullfile(outBaseFileName);%
+imwrite(I, outFullFileName, 'png');
+
+end
