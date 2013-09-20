@@ -26,5 +26,5 @@ imwrite(I, outFullFileName, 'png');
 
 end
 
-progressIndication = sprintf('Wrote %d frames to folder "%s"',numberOfFramesWritten, outputFolder);
+progressIndication = sprintf('Wrote %d frames to folder "%s in .png format"',numberOfFramesWritten, outputFolder);
 disp(progressIndication);
