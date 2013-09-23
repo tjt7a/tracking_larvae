@@ -118,7 +118,7 @@ for rr = 1:length(objs_width);
     currentobj = objs_width{rr};
     pixelxy = zeros(length(currentobj),2);
     for ss = 1:length(currentobj)
-        [xx, yy] = ind2sub(size(I), currentobj(ss));
+        [yy, xx] = ind2sub(size(I), currentobj(ss));
         pixelxy(ss,:) = [xx, yy];
     end
     xavg = mean(pixelxy(:,1));
